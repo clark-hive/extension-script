@@ -1,3 +1,5 @@
+#define _GLIBCXX_USE_CXX11_ABI 1
+
 #include <opencv2/opencv.hpp>
 #include <torch/script.h>
 
@@ -26,6 +28,7 @@ torch::Tensor warp_perspective(torch::Tensor image, torch::Tensor warp) {
   return output.clone();
   // END output_tensor
 }
+
 
 TORCH_LIBRARY(my_ops, m) {
   m.def("warp_perspective", warp_perspective);
