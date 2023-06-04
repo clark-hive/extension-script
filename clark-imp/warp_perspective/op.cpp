@@ -1,5 +1,3 @@
-#define _GLIBCXX_USE_CXX11_ABI 1
-
 #include <opencv2/opencv.hpp>
 #include <torch/script.h>
 
